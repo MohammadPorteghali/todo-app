@@ -18,7 +18,7 @@
     <div class="container">
       <input v-model="newTodo" @keypress.enter="createTodo" class="box input" type="text" placeholder="Create a new todo...">
       <div class="box">
-        <div class="actions" v-show="todoList.length > 0">
+        <div class="actions">
           <div class="items-left">{{ actives + ' items left' }}</div>
           <div class="button-group filters">
             <button @click="filterKey = 'all'" :class="{'active-filter' : filterKey === 'all'}">
