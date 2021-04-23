@@ -2,23 +2,27 @@
 
 // Primary
 html {
-  --primary: hsl(0, 0%, 98%);
-  --secondary: hsl(236, 33%, 92%);
+  --primary: hsl(236, 33%, 92%);
+  --secondary: hsl(0, 0%, 100%);
+  --bright-blue: hsl(220, 98%, 61%);
   --light-grayish-blue: hsl(233, 11%, 84%);
   --dark-grayish-blue: hsl(236, 9%, 61%);
   --very-dark-grayish-blue:  hsl(235, 19%, 35%);
-  --gray: hsl(0, 0%, 52%);
-  --text: hsl(0, 0%, 0%);
+  --hover:  hsl(235, 19%, 35%);
+  --border: hsl(0, 0%, 81%);
+  --text: hsl(235, 19%, 35%);
 }
 
 html[data-theme='dark'] {
   --primary: hsl(235, 21%, 11%);
   --secondary: hsl(235, 24%, 19%);
+  --bright-blue: hsl(220, 98%, 61%);
   --light-grayish-blue: hsl(234, 39%, 85%);
   --light-grayish-blue: hsl(236, 33%, 92%);
   --dark-grayish-blue: hsl(234, 11%, 52%);
   --very-dark-grayish-blue:  hsl(233, 14%, 35%);
-  --gray: hsl(0, 0%, 74%);
+  --hover: hsl(236, 33%, 92%);
+  --border:hsl(233, 6%, 28%);
   --text: hsl(0, 0%, 100%);
 };
 
