@@ -67,14 +67,15 @@ export default {
   },
   methods: {
     switchTheme() {
+      let element = document.getElementById("app")
       if (this.dark) {
         this.$store.commit('switchTheme', 'dark')
-        if (window.innerWidth > 550) document.getElementById('app').style.backgroundImage = 'url(img/bg-desktop-dark.02105f02.jpg)'
-        else  document.getElementById('app').style.backgroundImage = 'url(img/bg-mobile-dark.b0112ea5.jpg)'
+        element.classList.remove("light")
+        element.classList.add("dark")
       } else {
         this.$store.commit('switchTheme', 'light')
-        if (window.innerWidth > 550) document.getElementById('app').style.backgroundImage = 'url(img/bg-desktop-light.988cb74c.jpg)'
-        else document.getElementById('app').style.backgroundImage = 'url(img/bg-mobile-light.266f20c7.jpg)'
+        element.classList.remove("dark")
+        element.classList.add("light")
       }
       this.dark = !this.dark
     },
@@ -105,16 +106,25 @@ export default {
 </script>
 
 <style>
-#app {
+.light {
   background-image: url(../assets/images/bg-desktop-light.jpg);
+  background-size: contain;
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+.dark {
+  background-image: url(../assets/images/bg-desktop-dark.jpg);
   background-size: contain;
   background-position: center 0;
   background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 550px) {
-  #app {
+  .light {
     background-image: url(../assets/images/bg-mobile-light.jpg);
+  }
+  .dark {
+    background-image: url(../assets/images/bg-mobile-dark.jpg);
   }
 }
 </style>
@@ -146,7 +156,6 @@ export default {
     }
 
     & .theme-switcher {
-      height: 23px;
 
       &:hover {
         cursor: pointer;
